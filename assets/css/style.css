@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* https://stackoverflow.com/questions/12144000/using-custom-fonts-using-css */
+@font-face {
+    /* Font - https://troisieme-type.com/anurati-pro */
+    font-family: "Anurati";
+    src: url("../fonts/Anurati.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Blanka";
+    src: url("../fonts/Blanka.otf") format("truetype");
+}
+
+/* https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+.intro video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.intro-text {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 5rem;
+    font-family: "Anurati", sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite;
+    z-index: 1;
+}
+
+.intro-cap {
+    position: absolute;
+    top: 53%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Blanka", sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite;
+    z-index: 1;
+}
+
+.intro-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    animation: bounce 2s infinite;
+}
+  
+.arrow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.blankc{
+    height: 1300px;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.container-fluid {
+    display: inline-block;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'Blanka';
+    text-decoration: none;
+}
+
+.navbar-nav {
+    margin: auto !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar.bg-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s;
+}
+
+.navbar.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.navbar.bg-dark-scroll {
+    background-color: #171818 !important;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Blanka';
+}
+
+.navbar-btn{
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Blanka';
+}
+
+.btn.btn-round {
+    border-radius: 40px; 
+}
+
+@media (max-width:768px){
+    .intro-text {
+        position: absolute;
+        top: 38%;
+        left: 4px;
+        right: 4px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+        font-size: 4rem;
+        font-family: "Anurati", sans-serif;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: bounce 2s infinite;
+        z-index: 1;
+    }
+    
+    .intro-cap {
+        position: absolute;
+        top: 58%;
+        left: 4px;
+        right: 4px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: "Blanka", sans-serif;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: bounce 2s infinite;
+        z-index: 1;
+    }
+}
